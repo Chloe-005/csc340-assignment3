@@ -40,8 +40,11 @@ Updates an existing character
 - DELETE /characters/{id}  
 Deletes a character by ID
 
-- GET /characters/category/{category}  
-Returns all characters in a category (universe or role)
+- GET /characters/universe/{universe}  
+Returns all characters in a universe
+
+- GET /characters/role/{role}  
+Returns all characters in a role
 
 - GET /characters/search?name=value  
 Returns characters with name that contains the string
