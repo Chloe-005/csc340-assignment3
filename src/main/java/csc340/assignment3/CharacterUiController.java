@@ -34,4 +34,10 @@ public class CharacterUiController {
     public String showForm(){
         return "new-character-form";
     }
+
+    @GetMapping("/all")
+    public String getAllCharacters(Model model){
+        model.addAttribute("characterList", characterService.getAllCharacters());
+        return "character-list";
+    }
 }
