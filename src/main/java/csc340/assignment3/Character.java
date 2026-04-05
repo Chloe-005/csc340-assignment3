@@ -22,7 +22,7 @@ public class Character {
     private String role;
     private String universe;
 
-    @Column(length = 2048)
+    @Column(nullable = false, length = 2048)
     private String image;
 
     public Character() {
