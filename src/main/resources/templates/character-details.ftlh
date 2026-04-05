@@ -92,13 +92,13 @@
     <div class="container">
         <h1>${character.name}</h1>
 
-        <img src="https://via.placeholder.com/400x300" alt="Character image" class="character-img">
+        <img src="${character.image}" alt="Character image" class="character-img">
 
         <h2>Character details</h2>
         <p><strong>Universe:</strong> ${character.universe}</p>
         <p><strong>Role:</strong> ${character.role}</p>
 
-        <h2>Backstory</h2>
+        <h2>Description</h2>
         <p>${character.description}</p>
 
         <ul class="action-list">

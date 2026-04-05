@@ -16,28 +16,33 @@ public class Character {
     private Long characterId;
 
     @Column(nullable = false)
-    public String name;
+    private String name;
 
-    public String description;
-    public String role;
-    public String universe;
+    private String description;
+    private String role;
+    private String universe;
+
+    @Column(length = 2048)
+    private String image;
 
     public Character() {
     }
 
-    public Character(String name, String description, String role, String universe) {
+    public Character(String name, String description, String role, String universe, String image) {
         this.name = name;
         this.description = description;
         this.role = role;
         this.universe = universe;
+        this.image = image;
     }
 
-    public Character(Long characterId, String name, String description, String role, String universe) {
+    public Character(Long characterId, String name, String description, String role, String universe, String image) {
         this.characterId = characterId;
         this.name = name;
         this.description = description;
         this.role = role;
         this.universe = universe;
+        this.image = image;
     }
 
     public Long getCharacterId() {
@@ -78,5 +83,13 @@ public class Character {
 
     public void setUniverse(String universe) {
         this.universe = universe;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

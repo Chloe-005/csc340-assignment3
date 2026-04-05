@@ -87,8 +87,7 @@
 
             <#list characterList as character>
                 <div class="card">
-                    <img
-                        src="https://via.placeholder.com/400x300">
+                    <img src="${character.image}">
                     <h3>${character.name}</h3>
                     <p>Universe: ${character.universe}</p>
                     <p>Role: ${character.role}</p>
