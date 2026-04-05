@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Character Details</title>
@@ -47,58 +48,70 @@
             display: block;
             margin-bottom: 20px;
         }
+
+        .action-list {
+            list-style: none;
+            padding: 0;
+            max-width: 300px;
+        }
+
+        .action-list li {
+            border: 1px solid #416ec7;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #416ec7;
+        }
+
+        .action-list a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .action-list a:hover {
+            background-color: #345bb0;
+            color: #ffffff;
+        }
     </style>
 </head>
+
 <body>
 
-<div class="navbar">
-    <h2>Anime Characters</h2>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="details.html">Details</a>
-        <a href="about.html">About</a>
-        <a href="new-character-form.html">Add a Character</a>
+    <div class="navbar">
+        <h2>Anime Characters</h2>
+        <div class="nav-links">
+            <a href="/characters/all">Home</a>
+            <a href="/characters/about">About</a>
+            <a href="/characters/add">Add a Character</a>
+        </div>
     </div>
-</div>
 
-<div class="container">
-    <h1>${character.name}</h1>
+    <div class="container">
+        <h1>${character.name}</h1>
 
-    <img src="https://th.bing.com/th/id/R.11c25d03ee017edfeff55e67d3f7f201?rik=sDxyKtXSq7qetA&pid=ImgRaw&r=0" alt="Character image" class="character-img">
+        <img src="https://via.placeholder.com/400x300" alt="Character image" class="character-img">
 
-    <h2>Character details</h2>
-    <p><strong>Universe:</strong> Sword Art Online</p>
-    <p><strong>Role:</strong> Fighter</p>
-    <p><strong>Power Level:</strong> High</p>
-    <p><strong>Species:</strong> Human</p>
+        <h2>Character details</h2>
+        <p><strong>Universe:</strong> ${character.universe}</p>
+        <p><strong>Role:</strong> ${character.role}</p>
 
-    <h2>Backstory</h2>
-    <p>
-        Asuna Yuuki is a skilled swordswoman trapped in the virtual reality game
-        Sword Art Online. She becomes one of the strongest players and
-        joins the Knights of the Blood Oath, where she helps lead the fight to
-        free everyone from the game.
-    </p>
+        <h2>Backstory</h2>
+        <p>${character.description}</p>
 
-    <h2>Abilities</h2>
-    <ul>
-        <li>Advanced sword fighting skills</li>
-        <li>Healing skills</li>
-        <li>Rapier Mastery</li>
-    </ul>
+        <ul class="action-list">
+            <li>
+                <a href="/characters/updateForm/${character.characterId?c}">Edit Character</a>
+            </li>
+            <li>
+                <a href="/characters/all">Back to Gallery</a>
+            </li>
+        </ul>
 
-    <h2>First Appearance</h2>
-    <p>
-        She first shows up in epiode one of the anime. She is a recurring 
-        character in Sword Art online.
-    </p>
-
-    <h2>Personality</h2>
-    <p>
-        She is kind, strong willed, and determined. These traits help her standout
-        in Sword Art Online.
-    </p>
-</div>
+    </div>
 
 </body>
+
 </html>

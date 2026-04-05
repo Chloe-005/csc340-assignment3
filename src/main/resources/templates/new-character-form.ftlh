@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Add a Character</title>
@@ -47,7 +48,8 @@
             font-weight: bold;
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             padding: 8px;
             margin: 8px 0 15px 0;
@@ -67,40 +69,41 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="navbar">
-    <h2>Anime Characters</h2>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="details.html">Details</a>
-        <a href="about.html">About</a>
-        <a href="new-character-form.html">Add a Character</a>
+    <div class="navbar">
+        <h2>Anime Characters</h2>
+        <div class="nav-links">
+            <a href="/characters/all">Home</a>
+            <a href="/characters/about">About</a>
+            <a href="/characters/add">Add a Character</a>
+        </div>
     </div>
-</div>
 
-<div class="container">
-    <h1>Add a New Character</h1>
+    <div class="container">
+        <h1>Add a New Character</h1>
 
-    <form>
-        <label for="name">Character Name</label>
-        <input type="text" id="name">
+        <form>
+            <label for="name">Character Name</label>
+            <input type="text" id="name">
 
-        <label for="universe">Universe</label>
-        <input type="text" id="universe">
+            <label for="universe">Universe</label>
+            <input type="text" id="universe">
 
-        <label for="role">Role</label>
-        <input type="text" id="role">
+            <label for="role">Role</label>
+            <input type="text" id="role">
 
-        <label for="image">Image URL</label>
-        <input type="text" id="image">
+            <label for="image">Image URL</label>
+            <input type="text" id="image">
 
-        <label for="description">Short Description</label>
-        <textarea id="description" rows="4"></textarea>
+            <label for="description">Short Description</label>
+            <textarea id="description" rows="4"></textarea>
 
-        <button type="submit">Submit</button>
-    </form>
-</div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
 </body>
+
 </html>
