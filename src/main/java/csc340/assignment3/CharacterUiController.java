@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/characters")
@@ -62,5 +63,17 @@ public class CharacterUiController {
     public String updateCharacter(@PathVariable Long id, Character character) {
         characterService.updateCharacter(id, character);
         return "redirect:/characters/" + id;
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteCharacter(@PathVariable Long id) {
+        characterService.deleteCharacter(id);
+        return "redirect:/characters/all";
+    }
+
+    @GetMapping("/search")
+    public String searchByName(@RequestParam String name, Model model) {
+        model.addAttribute("characterList", characterService.searchCharactersByName(name));
+        return "character-list";
     }
 }

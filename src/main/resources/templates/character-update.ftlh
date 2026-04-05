@@ -84,7 +84,7 @@
     <div class="container">
         <h1>Edit Character</h1>
 
-        <form id="edit-character" action="/characters/update/${characterId?c}" method="post">
+        <form id="edit-character" action="/characters/update/${character.characterId}" method="post">
             <label for="name">Character Name</label>
             <input type="text" id="name" name="name" value="${character.name}" />
 
@@ -95,12 +95,13 @@
             <input type="text" id="role" name="role" value="${character.role}" />
 
             <label for="image">Image File</label>
-            <input type="text" id="image" name="image" value="${character.image!}"/>
+            <input type="text" id="image" name="image" value="${character.image!}" />
 
             <label for="description">Short Description</label>
             <textarea id="description" rows="4" name="description">${character.description}</textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Save</button>
+            <a href="/characters/${character.characterId?c}"><button type="button">Back</button></a>
         </form>
     </div>
 

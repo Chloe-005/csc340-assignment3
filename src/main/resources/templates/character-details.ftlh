@@ -49,6 +49,19 @@
             margin-bottom: 20px;
         }
 
+        button {
+            padding: 10px 15px;
+            background-color: #8baff7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
         .action-list {
             list-style: none;
             padding: 0;
@@ -56,24 +69,22 @@
         }
 
         .action-list li {
-            border: 1px solid #416ec7;
-            border-radius: 8px;
             margin-bottom: 10px;
-            background-color: #416ec7;
         }
 
         .action-list a {
             display: block;
             padding: 10px 15px;
+            background-color: #8baff7;
+            color: white;
             text-decoration: none;
-            color: #ffffff;
-            font-weight: 500;
+            font-weight: bold;
             text-align: center;
+            border-radius: 6px;
         }
 
         .action-list a:hover {
-            background-color: #345bb0;
-            color: #ffffff;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -103,7 +114,11 @@
 
         <ul class="action-list">
             <li>
-                <a href="/characters/updateForm/${character.characterId?c}">Edit Character</a>
+                <a href="/characters/updateForm/${character.characterId}">Edit Character</a>
+            </li>
+            <li>
+                <a href="/characters/delete/${character.characterId}"
+                    onclick="return confirm('Are you sure you want to delete this character');">Delete</a>
             </li>
             <li>
                 <a href="/characters/all">Back to Gallery</a>
