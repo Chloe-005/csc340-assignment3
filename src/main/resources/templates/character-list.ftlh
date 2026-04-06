@@ -81,7 +81,10 @@
     <div class="container">
         <h1>Character Gallery</h1>
 
-        <input type="text" id="search" placeholder="Search characters..." onkeyup="filterCharacters()">
+        <form action="/characters/search" method="get">
+            <input type="text" name="keyword" placeholder="Search by name/universe/role">
+            <button type="submit">search</button>
+        </form>
 
         <div class="grid" id="gallery">
 
@@ -97,18 +100,6 @@
 
         </div>
     </div>
-
-    <script>
-        function filterCharacters() {
-            let input = document.getElementById("search").value.toLowerCase();
-            let cards = document.getElementsByClassName("card");
-
-            for (let card of cards) {
-                let name = card.querySelector("h3").textContent.toLowerCase();
-                card.style.display = name.includes(input) ? "block" : "none";
-            }
-        }
-    </script>
 
 </body>
 

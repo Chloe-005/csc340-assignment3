@@ -1,5 +1,8 @@
 package csc340.assignment3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -72,8 +75,20 @@ public class CharacterUiController {
     }
 
     @GetMapping("/search")
-    public String searchByName(@RequestParam String name, Model model) {
-        model.addAttribute("characterList", characterService.searchCharactersByName(name));
+    public String searchByName(@RequestParam String keyword, Model model) {
+        List<Character> results = new ArrayList<>();
+
+        if(!characterService.searchCharactersByName(keyword).isEmpty()){
+            results.addAll(characterService.searchCharactersByName(keyword));
+        }
+        if(!characterService.getCharactersByUniverse(keyword).isEmpty()){
+            results.addAll(characterService.getCharactersByUniverse(keyword));
+        }
+        if(!characterService.getCharactersByRole(keyword).isEmpty()){
+            results.addAll(characterService.getCharactersByRole(keyword));
+        }
+        
+        model.addAttribute("characterList", results);
         return "character-list";
     }
 }
