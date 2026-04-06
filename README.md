@@ -46,7 +46,9 @@ Returns all characters in a category (universe or role)
 - GET /characters/search?name=value  
 Returns characters with name that contains the string
 
-## Demo Video
+## Demo Videos
 
 Link to demo video: 
 https://uncg-my.sharepoint.com/:v:/g/personal/carhodes_uncg_edu/IQAtX2vi7pV7QYujo3f1Hui9ARkXF6AhnxxHZRli0KlYo0E?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=eNdRKh
+
+New Demo for Assignment 4 MVC App: https://uncg-my.sharepoint.com/:v:/g/personal/carhodes_uncg_edu/IQDf7gRQm0reT50ZuS45z_UqAVSoRh4LPvcD24k0B8zjrns?e=yBFx76
